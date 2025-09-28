@@ -51,6 +51,55 @@ h1, h2, h3 {
   font-size: 1.2rem;
   margin-bottom: 2rem;
 }
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.video-background iframe {
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 177.78vh;   /* 16:9 aspect ratio scaling */
+  height: 100vh;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(135deg, rgba(10,37,64,0.6), rgba(29,53,87,0.6));
+  z-index: -1;
+}
+
+.profile-photo {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  margin-bottom: 1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
 .btn {
   background: #e63946;
   color: white;
